@@ -1,0 +1,33 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<mat-toolbar color="primary" class="menu-wrapper">
+    <button mat-icon-button aria-label="Example icon-button with a menu" [matMenuTriggerFor]="menu">
+      <mat-icon aria-hidden="false" aria-label="check mark icon"><span class="material-icons">
+        menu
+        </span></mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" >
+      <button routerLink="/dashboard/news" mat-menu-item>
+        <span>Новости</span>
+      </button>
+      <button routerLink="/login" mat-menu-item routerLink="/dashboard/favoriteNews">
+        <span>Избранные</span>
+      </button>
+      <button routerLink="/login" mat-menu-item (click)="logOut()">
+        <span>Выйти</span>
+      </button>
+    </mat-menu>
+
+    <ng-container>
+      <span class="hello-all">
+        Добро пожаловать в приложение (Angular)
+      </span>
+    </ng-container>
+    <ng-container >
+      <span class="hello-all">
+        <mat-icon class="fas fa-user-tie"> </mat-icon>
+      </span>
+    </ng-container>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

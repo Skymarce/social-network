@@ -1,0 +1,21 @@
+<form class="modal-create" [formGroup]="createForm">
+    <button class="modal-create-close" (click)="closeModalCreate()">
+        <mat-icon>close</mat-icon>
+    </button>
+    <div class="modal-create-wrapper">
+        <h4 class="modal-create-title">Создание новости</h4>
+        <div class="modal-create-input">
+            <label for="title">Заголовок</label>
+            <input name="title" type="text" formControlName="title">
+        </div>
+        <div class="modal-create-input">
+            <label for="country">Страна</label>
+            <input name="country" type="text" formControlName="country">
+        </div>
+        <div class="modal-create-input">
+            <label for="link">Источник</label>
+            <input name="link" type="text" formControlName="link">
+        </div>
+        <button class="modal-create-btn" (click)="createNews()">Создать</button>
+    </div>
+</form>

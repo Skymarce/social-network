@@ -1,0 +1,22 @@
+<form class="modal-change" [formGroup]="changeForm">
+    <button class="modal-change-close" (click)="closeModalChange()">
+        <mat-icon>close</mat-icon>
+    </button>
+    <div class="modal-change-wrapper">
+        <h4 class="modal-change-title">Редактирование новости</h4>
+        <div class="modal-change-input">
+            <label for="title">Заголовок</label>
+            <input name="title" type="text" formControlName="title">
+        </div>
+        <div class="modal-change-input">
+            <label for="country">Страна</label>
+            <input name="country" type="text" formControlName="country">
+        </div>
+        <div class="modal-change-input">
+            <label for="link">Источник</label>
+            <input name="link" type="text" formControlName="link">
+        </div>
+        <button class="modal-change-btn" (click)="editNews()">Изменить</button>
+    </div>
+    <app-spinner [isLoading]="isLoading.getValue()"></app-spinner>
+</form>

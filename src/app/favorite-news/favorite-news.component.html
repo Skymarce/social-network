@@ -1,0 +1,14 @@
+<div class="cards-wrapper">
+    <div class="card" *ngFor="let news of userNews?.news">
+        <div class="card-wrapper">
+            <div class="card-title">{{news.title}}</div>
+            <div class="card-country">{{news.country}}</div>
+            <div class="card-link">
+                <a href="{{news.link}}">Подробнее</a> 
+            </div>
+        </div>
+        <button class="card-delete" (click)="deleteFavotiteNews(news.id)">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </div>
+</div>

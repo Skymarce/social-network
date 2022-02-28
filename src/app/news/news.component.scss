@@ -1,0 +1,34 @@
+.mat-table {
+    width: 100%;
+    a {
+        text-decoration: none;
+        color: black;
+        &:hover {
+            color: #037E8C;
+        }
+    }
+}
+
+.change-btn, .delete-btn {
+    border: none;
+    outline: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.create-btn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 32px;
+    width: 130px;
+    height: 45px;
+    background: #037E8C;
+    border-radius: 9px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}

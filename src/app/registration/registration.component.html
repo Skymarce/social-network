@@ -1,0 +1,26 @@
+<form class="registration" [formGroup]="registrationForm">
+    <div class="registration-close"></div>  
+    <div class="registration-wrapper">
+        <h4 class="registration-title">Регистрация пользователя</h4>
+        <div class="registration-inputs">
+            <div class="registration-input">
+                <label for="name">Имя</label>
+                <input type="text" name="name" class="registration-name" formControlName="name">
+            </div>
+            <div class="registration-input">
+                <label for="secondName">Фамилия</label>
+                <input type="text" name="secondName" class="registration-surname" formControlName="secondName">
+            </div>
+            <div class="registration-input">
+                <label for="email">Email</label>
+                <input type="text" name="email" class="registration-login" formControlName="email">
+            </div>
+            <div class="registration-input">
+                <label for="password">Пароль</label>
+                <input type="password" name="password" class="registration-password" formControlName="password">
+            </div>
+        </div>
+        <button [disabled]="registrationForm.invalid" (click)="submit()">Зарегистрироваться</button>
+        <a class="registration-tologin" routerLink="/login">Войти</a>
+    </div>
+</form>

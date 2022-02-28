@@ -1,0 +1,21 @@
+<form class="registration" [formGroup]="loginForm">
+    <div class="registration-close"></div>
+        
+    <div class="registration-wrapper">
+        <h4 class="registration-title">Войти в личный кабинет</h4>
+        <div class="registration-inputs">
+            <div class="registration-input">
+                <label for="email">Email</label>
+                <input type="text" name="email" class="registration-login" formControlName="email">
+            </div>
+            <div class="registration-input">
+                <label for="password">Пароль</label>
+                <input type="password" name="password" class="registration-password" formControlName="password">
+            </div>
+        </div>
+        <button [disabled]="loginForm.invalid" (click)="submit()">Войти</button>
+        <a class="registration-tologin" routerLink="/registration" >Регистрация</a>
+    </div>
+</form>
+
+<router-outlet></router-outlet>
