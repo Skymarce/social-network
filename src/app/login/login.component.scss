@@ -9,15 +9,6 @@
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    &-close {
-        position: absolute;
-        top: 51px;
-        right: 51px;
-        width: 20px;
-        height: 20px;
-        background: url('../../img/registration-close.svg') center center / cover no-repeat;
-        cursor: pointer;
-    }
     &-wrapper {
         padding: 82px;
     }
